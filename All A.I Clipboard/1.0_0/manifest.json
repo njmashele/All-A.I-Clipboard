@@ -1,0 +1,49 @@
+{
+  "manifest_version": 3,
+  "name": "All A.I Clipboard",
+  "version": "1.1",
+  "description": "Easily access and insert saved prompts for any popular A.I site.",
+  "author": "Jon Mashele",                       
+  "homepage_url": "https://github.com/njmashele/All-A.I-Clipboard",
+  "icons": {
+    "16": "images/icon16.png",
+    "48": "images/icon48.png",
+    "128": "images/icon128.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "images/icon16.png",
+      "48": "images/icon48.png",
+      "128": "images/icon128.png"
+    }
+  },
+  "permissions": [
+    "storage",
+    "scripting",
+    "activeTab",
+    "clipboardWrite"
+  ],
+  "host_permissions": [
+    "https://chat.openai.com/*",
+    "https://gemini.google.com/*",
+    "https://www.chat.deepseek.com/*",
+    "https://grok.x.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://chat.openai.com/*",
+        "https://gemini.google.com/*",
+        "https://www.chat.deepseek.com/*",
+        "https://grok.x.com/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ]
+  
+}
