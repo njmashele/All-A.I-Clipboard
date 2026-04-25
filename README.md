@@ -1,5 +1,3 @@
----
-
 ## AllAI Clipboard – Local Setup Guide
 
 **AllAI Clipboard** is a browser extension that lets you save and reuse prompts across major AI platforms. Instead of rewriting the same prompts, you can store them once and quickly insert them into any AI chat box.
@@ -95,5 +93,3 @@ For Edge:
 * If the extension does not load, check for errors on the extensions page
 * Ensure `manifest.json` is valid and in the root folder
 * Make sure the extension has permission to interact with the sites you are using
-
----
